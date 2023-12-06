@@ -1,18 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../components/styles/Home.module.css";
+import Navbar from "../components/Navbar";
+import LandingComponents from "../components/Landing";
 
-function App() {
+export default function LandingPage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          HI
-        </p>
-        
-      </header>
+    <div className={styles.container}>
+      <Head>
+        <title>TUPC Water Dispenser Refill Alert System</title>
+        <link rel="icon" href="/logo.ico" />
+      </Head>
+      <Navbar />
+      <LandingComponents />
     </div>
   );
 }
-
-export default App;
